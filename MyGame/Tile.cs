@@ -10,26 +10,29 @@ namespace MyGame
 {
     enum TileType
     {
-        NONE,
-        GROUND
+        NONE,       // Пусто
+        GROUND      // Почва
     }
 
     class Tile : Transformable, Drawable
     {
+        // Размер тайла по ширине и высоте
         public const int TILE_SIZE = 16;
 
-        TileType type = TileType.NONE;
+        TileType type = TileType.GROUND;
         RectangleShape rectShape;
 
-        public Tile()
+        public Tile(TileType type)
         {
+            this.type = type;
+
             rectShape = new RectangleShape(new Vector2f(TILE_SIZE, TILE_SIZE));
             
-            switch ()
+            switch (type)
             {
                 case TileType.GROUND:
                     rectShape.Texture = Content.texTile0;
-                    rectShape.TextureRect = new IntRect();
+                    rectShape.TextureRect = new IntRect(0, 0, TILE_SIZE, TILE_SIZE);
                     break;
             }
         }
@@ -37,6 +40,8 @@ namespace MyGame
         public void Draw(RenderTarget target, RenderStates states)
         {
             states.Transform *= Transform;
+
+            target.Draw(rectShape, states);
         }
     }
 }

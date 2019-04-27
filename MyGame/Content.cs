@@ -15,7 +15,7 @@ namespace MyGame
 
         public static void Load()
         {
-            texTile0 = new Texture(CONTENT_DIR + "Tiles_0.png");
+            texTile0 = new Texture(CONTENT_DIR + "Textures\\Tiles_0.png");
         }
     }
 }
