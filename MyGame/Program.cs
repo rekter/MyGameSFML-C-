@@ -18,6 +18,9 @@ namespace MyGame
 
             win.Closed += Win_Closed;
 
+            // Загрузка контента 
+            Content.Load();
+
             while (win.IsOpen)
             {
                 win.DispatchEvents();
