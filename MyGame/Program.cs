@@ -11,6 +11,10 @@ namespace MyGame
     {
 
         static RenderWindow win;
+
+        public static RenderWindow Window { get { return win; } }
+        public static Game Game { private set; get; }
+
         static void Main(string[] args)
         {
             win = new RenderWindow(new SFML.Window.VideoMode(800, 600), "Моя игра!");
@@ -21,13 +25,17 @@ namespace MyGame
             // Загрузка контента 
             Content.Load();
 
+            Game = new Game();
+
             while (win.IsOpen)
             {
                 win.DispatchEvents();
 
+                Game.Update();
+
                 win.Clear(Color.Black);
 
-                // Рисуем здесь!
+                Game.Draw();
 
                 win.Display();
             }
