@@ -1,0 +1,7 @@
+D:\GameDev\MyGame\MyGame\bin\Debug\MyGame.exe.config
+D:\GameDev\MyGame\MyGame\bin\Debug\MyGame.exe
+D:\GameDev\MyGame\MyGame\bin\Debug\MyGame.pdb
+D:\GameDev\MyGame\MyGame\obj\Debug\MyGame.csprojAssemblyReference.cache
+D:\GameDev\MyGame\MyGame\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+D:\GameDev\MyGame\MyGame\obj\Debug\MyGame.exe
+D:\GameDev\MyGame\MyGame\obj\Debug\MyGame.pdb
