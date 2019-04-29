@@ -18,7 +18,7 @@ namespace MyGame
 
         static void Main(string[] args)
         {
-            win = new RenderWindow(new SFML.Window.VideoMode(800, 600), "Моя игра!");
+            win = new RenderWindow(new SFML.Window.VideoMode(800, 600), "The Relt Journey");
             win.SetVerticalSyncEnabled(true);
 
             win.Closed += Win_Closed;

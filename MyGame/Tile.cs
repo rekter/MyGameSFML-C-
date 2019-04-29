@@ -10,8 +10,9 @@ namespace MyGame
 {
     enum TileType
     {
-        NONE,       // Пусто
-        GROUND      // Почва
+        NONE,           // Пусто
+        GROUND,         // Почва
+        GRASS           // Трава
     }
 
     class Tile : Transformable, Drawable
@@ -31,10 +32,13 @@ namespace MyGame
             switch (type)
             {
                 case TileType.GROUND:
-                    rectShape.Texture = Content.texTile0;
-                    rectShape.TextureRect = new IntRect(0, 0, TILE_SIZE, TILE_SIZE);
+                    rectShape.Texture = Content.texTile0;   // Почва
+                    break;
+                case TileType.GRASS:
+                    rectShape.Texture = Content.texTile1;   // Трава
                     break;
             }
+            rectShape.TextureRect = new IntRect(0, 0, TILE_SIZE, TILE_SIZE);
         }
 
         public void Draw(RenderTarget target, RenderStates states)
